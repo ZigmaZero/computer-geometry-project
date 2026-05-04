@@ -1,6 +1,6 @@
 from data_structures.definitions import PlayingRegion, Agent, Faction, Obstacle
 from algorithms.baseline import baseline_algorithm
-import shapely
+from algorithms.proposed import proposed_algorithm
 
 region = PlayingRegion(10, 10)
 
@@ -18,3 +18,4 @@ obstacles = [
 ]
 
 agentlist, factions = baseline_algorithm(region, obstacles, agentlist, factions)
+agentlist, factions = proposed_algorithm(region, obstacles, agentlist, factions)
